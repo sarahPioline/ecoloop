@@ -1,15 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Menu from "./componants/menu";
+import Menu from "./components/menu";
 import { Home } from "./page/home";
-import { Calculator } from "./page/calculator";
+import { Calculator } from "./page/formCalculator/Calculator";
 import { Box, extendTheme } from "@chakra-ui/react";
 import { ChakraProvider } from "@chakra-ui/react";
-import { Footer } from "./componants/footer";
+import { Footer } from "./components/footer";
 import { Blog } from "./page/blog";
 
 const root = ReactDOM.createRoot(

@@ -1,8 +1,8 @@
 import { Button, HStack, Stack, Text, Link } from "@chakra-ui/react";
-import Menu from "../componants/menu";
+import Menu from "../components/menu";
 import { ReactComponent as HomeEarth } from "../images/homeEarth.svg";
 import { ReactComponent as Arrow } from "../images/arrow.svg";
-import { ActualityHome } from "../componants/ActualityHome";
+import { ActualityHome } from "../components/ActualityHome";
 
 export const Home = () => {
   return (
@@ -14,7 +14,7 @@ export const Home = () => {
         justifyContent={"space-between"}
         alignItems={"center"}
       >
-        <Stack>
+        <Stack gap={0}>
           <Text fontSize={"35px"} fontWeight={"600"} margin={"0"}>
             Améliore ton bilan carbone.{" "}
           </Text>

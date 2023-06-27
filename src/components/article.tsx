@@ -6,8 +6,10 @@ import {
   Text,
   Image,
   Badge,
+  IconButton,
 } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
+import { ArrowBackIcon } from "@chakra-ui/icons";
 
 export const Article = (currentArticle: any) => {
   const article = currentArticle.currentArticle;
@@ -22,6 +24,13 @@ export const Article = (currentArticle: any) => {
         h="400px"
         objectFit="cover"
         objectPosition="center"
+      />
+      <IconButton
+        aria-label="Search database"
+        icon={<ArrowBackIcon />}
+        backgroundColor={"#00CC81"}
+        borderRadius={"3xl"}
+        w="40px"
       />
       <Stack ml="400px" mr="400px" mt="10px">
         <Badge

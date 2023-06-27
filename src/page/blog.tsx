@@ -9,7 +9,7 @@ import {
   Badge,
 } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
-import { Article } from "../componants/article";
+import { Article } from "../components/article";
 import articles from "../articles/articles.json";
 
 export const Blog = () => {

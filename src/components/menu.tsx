@@ -6,7 +6,7 @@ export default function Menu() {
   const linkHoverColor = useColorModeValue("gray.800", "white");
 
   return (
-    <Box px={4} ml="70px" mr="70px" mt="30px" mb="20px">
+    <Box ml="70px" mr="70px" mt="30px" mb="20px">
       <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
         <Stack>
           <Link href={`/`}>
