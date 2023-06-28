@@ -14,10 +14,8 @@ import articles from "../articles/articles.json";
 
 export const Blog = () => {
   const { id } = useParams();
-  console.log(id);
   if (id) {
     const currentArticle = articles.find((objet) => objet.id === parseInt(id));
-    console.log(currentArticle);
     if (currentArticle) {
       return <Article currentArticle={currentArticle} />;
     } else {

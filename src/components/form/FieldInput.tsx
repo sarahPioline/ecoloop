@@ -38,6 +38,7 @@ export const FieldInput = (props: any) => {
     label,
     type,
     placeholder,
+    noInputStep = false,
     helper,
     size = "md",
     colorScheme,
@@ -68,15 +69,18 @@ export const FieldInput = (props: any) => {
     <FormGroup {...formGroupProps}>
       <InputGroup size={size}>
         {type === "number" ? (
-          <NumberInput min={0} colorScheme={colorScheme ?? "orange"}>
+          <NumberInput min={0} focusBorderColor="#15D08B">
             <NumberInputField />
-            <NumberInputStepper>
-              <NumberIncrementStepper />
-              <NumberDecrementStepper />
-            </NumberInputStepper>
+            {!noInputStep && (
+              <NumberInputStepper>
+                <NumberIncrementStepper />
+                <NumberDecrementStepper />
+              </NumberInputStepper>
+            )}
           </NumberInput>
         ) : (
           <Input
+            focusBorderColor="#15D08B"
             type={showPassword ? "text" : type || "text"}
             id={id}
             value={value ?? ""}
