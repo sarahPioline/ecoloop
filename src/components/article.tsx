@@ -10,13 +10,26 @@ import {
 } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
 import { ArrowBackIcon } from "@chakra-ui/icons";
+import { useNavigate } from "react-router-dom";
 
 export const Article = (currentArticle: any) => {
   const article = currentArticle.currentArticle;
+  const navigate = useNavigate();
 
-  const formattedText = article.article.replace(/\\n/g, "\n");
   return (
     <Stack mt="50px" mb="50px">
+      <Stack position="absolute" top="200px" ml="70px">
+        <IconButton
+          aria-label="Search database"
+          icon={<ArrowBackIcon />}
+          backgroundColor={"#00CC81"}
+          borderRadius="100%"
+          fontSize={"3xl"}
+          w="70px"
+          onClick={() => navigate(-1)}
+          h="70px"
+        />
+      </Stack>
       <Image
         src={article.image}
         w="auto"
@@ -24,14 +37,8 @@ export const Article = (currentArticle: any) => {
         h="400px"
         objectFit="cover"
         objectPosition="center"
-      />
-      <IconButton
-        aria-label="Search database"
-        icon={<ArrowBackIcon />}
-        backgroundColor={"#00CC81"}
-        borderRadius={"3xl"}
-        w="40px"
-      />
+      ></Image>
+
       <Stack ml="400px" mr="400px" mt="10px">
         <Badge
           ml="1"

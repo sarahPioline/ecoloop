@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import {
   AspectRatio,
   Box,
@@ -17,9 +18,17 @@ import { Formiz, FormizStep, useForm } from "@formiz/core";
 import { FaHamburger } from "react-icons/fa";
 import { LineStepper } from "../../components/form/LineStepper";
 
-export const FormFood = ({ setFoodValid }) => {
+export const FormFood = ({
+  setTransition,
+  setValueFood,
+  setActiveFormFood,
+  valueFood,
+}) => {
   const formFood = useForm({ subscribe: "form" });
 
+  useEffect(() => {
+    console.log(formFood);
+  }, [formFood]);
   const water = [
     {
       label: "Oui",
@@ -73,17 +82,31 @@ export const FormFood = ({ setFoodValid }) => {
     },
   ];
   const handleSubmit = (values) => {
-    setFoodValid(true);
+    console.log(values);
+    setValueFood(values);
+    setTransition(true);
+    setActiveFormFood(false);
   };
   return (
     <>
       <Heading size="xl" mb="20px">
         Test bilan carbone, partie alimentation
       </Heading>
-      <Formiz connect={formFood} onValidSubmit={handleSubmit}>
+      <Formiz
+        connect={formFood}
+        onValidSubmit={handleSubmit}
+        initialValues={valueFood}
+      >
         <form noValidate onSubmit={formFood.submitStep}>
           <Stack>
-            <LineStepper type="food" />
+            <HStack>
+              <Stack w={"50%"}>
+                <LineStepper type="food" />
+              </Stack>
+              <Stack w={"50%"}>
+                <LineStepper type="transport" unactive={true} />
+              </Stack>
+            </HStack>
             <FormizStep name="step1">
               <HStack mt="30px" mb="30px">
                 <HiInformationCircle size="50px" color="#FF8D1C" />

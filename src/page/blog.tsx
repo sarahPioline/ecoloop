@@ -7,6 +7,7 @@ import {
   Heading,
   useColorModeValue,
   Badge,
+  Button,
 } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
 import { Article } from "../components/article";
@@ -31,7 +32,7 @@ export const Blog = () => {
   return (
     <Stack mr="70px" ml="70px" mt="40px">
       <Heading size="xl" mb="20px">
-        Articles de blog
+        Actualités
       </Heading>
       {sortedData.map((article, index) => (
         <Box
@@ -92,6 +93,18 @@ export const Blog = () => {
             <Text as="p" marginTop="2" fontSize="lg">
               {article.article.slice(0, 300) + " ..."}
             </Text>
+            <Stack alignItems={"end"} mt="20px">
+              <Link href={`/news/${article.id}`}>
+                <Button
+                  backgroundColor={"#00CC81"}
+                  color={"white"}
+                  borderRadius={"26"}
+                  _hover={{ backgroundColor: "#78E2BB" }}
+                >
+                  Lire la suite
+                </Button>
+              </Link>
+            </Stack>
           </Box>
         </Box>
       ))}

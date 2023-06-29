@@ -16,27 +16,16 @@ export const Home = () => {
       >
         <Stack gap={0}>
           <Text fontSize={"35px"} fontWeight={"600"} margin={"0"}>
-            Améliore ton bilan carbone.{" "}
+            Améliore ton bilan carbone.
           </Text>
-          <HStack>
-            <Text fontSize={"35px"} margin={"0"} fontWeight={"600"}>
-              Et te
-            </Text>
-            <Text
-              color={"#00CC81"}
-              fontSize={"35px"}
-              margin={"0"}
-              fontWeight={"600"}
-            >
-              loop
-            </Text>
-            <Text fontSize={"35px"} margin={"0"} fontWeight={"600"}>
-              pas sur les prochaines années.
-            </Text>
-          </HStack>
-          <Stack w="48%">
+          <Text fontSize={"35px"} margin={"0"} fontWeight={"600"}>
+            Et te <span style={{ color: "#00CC81" }}>loop</span> pas sur les
+            prochaines années.
+          </Text>
+          <Stack w="48%" mt="10px">
             <Text>Cela ne te prendra que 5 minutes promis.</Text>
-            <Link href="/calculator">
+
+            <Link href="/calculator" mt="10px">
               <Button
                 backgroundColor={"#00CC81"}
                 color={"white"}

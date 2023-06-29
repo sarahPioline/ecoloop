@@ -64,12 +64,18 @@ export const FieldInput = (props: any) => {
     showError,
     ...rest,
   };
+  const handleChange = (value: any) => setValue(value);
 
   return (
     <FormGroup {...formGroupProps}>
       <InputGroup size={size}>
         {type === "number" ? (
-          <NumberInput min={0} focusBorderColor="#15D08B">
+          <NumberInput
+            min={0}
+            focusBorderColor="#15D08B"
+            value={value ?? ""}
+            onChange={handleChange}
+          >
             <NumberInputField />
             {!noInputStep && (
               <NumberInputStepper>

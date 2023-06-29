@@ -17,8 +17,14 @@ import { Formiz, FormizStep, useForm } from "@formiz/core";
 import { BsCarFrontFill } from "react-icons/bs";
 import { LineStepper } from "../../components/form/LineStepper";
 
-export const FormDriver = ({ setTransportValid }) => {
-  const formFood = useForm({ subscribe: "form" });
+export const FormDriver = ({
+  setValueTransport,
+  setActiveFormTransport,
+  setActiveFormFood,
+  valueTransport,
+  setResult,
+}) => {
+  const formFood = useForm();
 
   const water = [
     {
@@ -69,17 +75,29 @@ export const FormDriver = ({ setTransportValid }) => {
     },
   ];
   const handleSubmit = (values) => {
-    setTransportValid(true);
+    setValueTransport(values);
+    setResult(true);
   };
   return (
     <>
       <Heading size="xl" mb="20px">
         Test bilan carbone, partie transport
       </Heading>
-      <Formiz connect={formFood} onValidSubmit={handleSubmit}>
+      <Formiz
+        connect={formFood}
+        onValidSubmit={handleSubmit}
+        initialValues={valueTransport}
+      >
         <form noValidate onSubmit={formFood.submitStep}>
           <Stack>
-            <LineStepper type="transport" />
+            <HStack>
+              <Stack w={"50%"}>
+                <LineStepper type="food" unactive={true} />
+              </Stack>
+              <Stack w={"50%"}>
+                <LineStepper type="transport" />
+              </Stack>{" "}
+            </HStack>{" "}
             <FormizStep name="step1">
               <HStack mt="30px" mb="30px">
                 <HiInformationCircle size="50px" color="#6B70D6" />
@@ -190,7 +208,12 @@ export const FormDriver = ({ setTransportValid }) => {
               alignContent={"space-between"}
               justifyContent={"space-between"}
             >
-              <PreviousButton />
+              <PreviousButton
+                setValueTransport={setValueTransport}
+                setActiveFormFood={setActiveFormFood}
+                setActiveFormTransport={setActiveFormTransport}
+                formFood={formFood}
+              />
               <NextButton />
             </HStack>{" "}
           </Stack>
@@ -200,11 +223,36 @@ export const FormDriver = ({ setTransportValid }) => {
   );
 };
 
-const PreviousButton = (props) => {
+const PreviousButton = ({
+  props,
+  setActiveFormFood,
+  setValueTransport,
+  formFood,
+  setActiveFormTransport,
+}) => {
   const form = useForm({ subscribe: "form" });
 
   if (form.isFirstStep) {
-    return <Box />;
+    const back = () => {
+      setValueTransport(formFood.flatValues);
+      setActiveFormFood(true);
+      setActiveFormTransport(false);
+    };
+    return (
+      <Button
+        size="sm"
+        w="467px"
+        onClick={() => back()}
+        variant="ghost"
+        color="#6B70D6"
+        border={"2px"}
+        borderRadius={"26"}
+        borderColor={"#6B70D6"}
+        {...props}
+      >
+        Revenir à la partie alimentation{" "}
+      </Button>
+    );
   }
 
   return (

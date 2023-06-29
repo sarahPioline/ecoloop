@@ -30,24 +30,10 @@ export const ActualityHome = () => {
       mt="20px"
     >
       <Stack ml="70px" mr="70px" mb="20px">
-        <HStack>
-          <Text fontSize={"35px"} fontWeight={"600"} margin={"0"}>
-            L'actualité de notre planète à ne pas
-          </Text>
-          <HStack gap={0}>
-            <Text
-              color={"#00CC81"}
-              fontSize={"35px"}
-              margin={"0"}
-              fontWeight={"600"}
-            >
-              loop
-            </Text>
-            <Text fontSize={"35px"} margin={"0"} fontWeight={"600"}>
-              er
-            </Text>
-          </HStack>
-        </HStack>
+        <Text fontSize={"35px"} fontWeight={"600"} margin={"0"}>
+          L'actualité de notre planète à ne pas{" "}
+          <span style={{ color: "#00CC81" }}>loop</span>er
+        </Text>
         <Flex justifyContent="space-between">
           {topThreeData.map((article, index) => (
             <Card maxW="sm" key={index} boxShadow="xl">
