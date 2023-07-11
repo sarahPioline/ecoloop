@@ -83,7 +83,7 @@ export const Result = ({ valueTransport, valueFood }) => {
       <Heading mb="20px" as={"h3"} size={"lg"}>
         Petit récapitulatif pour savoir ou te situer.{" "}
       </Heading>
-      <UnorderedList fontWeight={"semibold"} spacing={"3"} mb="20px">
+      <UnorderedList spacing={"3"} mb="20px">
         <ListItem>
           Empreinte carbone de l'
           <span style={{ color: "#FD8D25" }}>alimentation</span> d'un Français :
