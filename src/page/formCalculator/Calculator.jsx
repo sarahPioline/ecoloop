@@ -23,7 +23,7 @@ export const Calculator = () => {
   const [valueTransport, setValueTransport] = useState({});
   const [transition, setTransition] = useState(false);
   const [result, setResult] = useState(false);
-
+  console.log(result);
   return (
     <Stack mr="70px" ml="70px" mt="100px" mb="70px">
       {result ? (
@@ -48,11 +48,13 @@ export const Calculator = () => {
                   <Text>
                     Tu as fait le bon choix c'est partit ! Ton bilan carbone se
                     passera en deux étapes, ton
+                    <span style={{ color: "#FD8D25" }}> alimentation </span>
+                    et tes{" "}
+                    <span style={{ color: "#6B70D6" }}>
+                      moyens de transport
+                    </span>
+                    .
                   </Text>
-                  <Text color={"#FD8D25"}> alimentation</Text>
-                  <Text> et tes </Text>
-                  <Text color={"#6B70D6"}> moyens de transport</Text>
-                  <Text>.</Text>
                 </HStack>
                 <HStack>
                   <Box

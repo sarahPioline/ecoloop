@@ -12,6 +12,7 @@ import {
 } from "@chakra-ui/react";
 import { useForm } from "@formiz/core";
 import { BsCarFrontFill } from "react-icons/bs";
+import { FaHamburger } from "react-icons/fa";
 
 export const LineStepper = ({ type, unactive = false, valueFood }) => {
   const form = useForm({ subscribe: "form" });
@@ -47,7 +48,11 @@ export const LineStepper = ({ type, unactive = false, valueFood }) => {
             <Text color="white" fontWeight={"semibold"}>
               {step()}
             </Text>
-            <BsCarFrontFill color="white" size="30%" />
+            {type === "food" ? (
+              <FaHamburger color="white" size="30%" />
+            ) : (
+              <BsCarFrontFill color="white" size="30%" />
+            )}
           </HStack>
         </Box>{" "}
         <Box ml="30%">
@@ -77,10 +82,12 @@ export const LineStepper = ({ type, unactive = false, valueFood }) => {
       <Stack direction="row" justifyContent={"space-between"}>
         {form.steps?.map((step, index) => (
           <Text
-            color={step.isCurrent ? firstColor : "#7B7C7C"}
+            color={
+              unactive ? "#7B7C7C" : step.isCurrent ? firstColor : "#7B7C7C"
+            }
             fontWeight={"semibold"}
-            onClick={() => form.goToStep(step.name)}
-            cursor={"pointer"}
+            onClick={() => !unactive && form.goToStep(step.name)}
+            cursor={unactive ? "default" : "pointer"}
           >
             {index + 1}
           </Text>
