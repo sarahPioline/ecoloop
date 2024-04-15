@@ -4,7 +4,6 @@ import {
   Text,
   Link,
   Stack,
-  Image,
   Wrap,
   WrapItem,
 } from "@chakra-ui/react";

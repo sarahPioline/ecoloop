@@ -8,7 +8,6 @@ import {
   FormLabel,
   SlideFade,
 } from "@chakra-ui/react";
-import { LuAlertCircle } from "react-icons/lu";
 
 import { FiAlertCircle } from "react-icons/fi";
 

@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Menu from "./components/menu";
 import { Home } from "./page/home";
 import { Calculator } from "./page/formCalculator/Calculator";
-import { Box, extendTheme } from "@chakra-ui/react";
+import { extendTheme } from "@chakra-ui/react";
 import { ChakraProvider } from "@chakra-ui/react";
 import { Footer } from "./components/footer";
 import { Blog } from "./page/blog";

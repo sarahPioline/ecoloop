@@ -1,18 +1,14 @@
 import {
   Stack,
   Card,
-  CardHeader,
   CardBody,
   CardFooter,
   Text,
   Flex,
-  Box,
   Button,
-  HStack,
   Image,
   Heading,
   Link,
-  ButtonGroup,
 } from "@chakra-ui/react";
 import actualityBg from "../images/actualityBg.png";
 import articles from "../articles/articles.json";

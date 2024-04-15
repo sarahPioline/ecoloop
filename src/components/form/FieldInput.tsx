@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from "react";
 
 import {
-  IconButton,
   Input,
   InputGroup,
-  InputLeftElement,
-  InputProps,
   InputRightElement,
   NumberDecrementStepper,
   NumberIncrementStepper,
@@ -14,10 +11,9 @@ import {
   NumberInputStepper,
   Spinner,
 } from "@chakra-ui/react";
-import { FieldProps, useField } from "@formiz/core";
-import { RiEyeCloseLine, RiEyeLine } from "react-icons/ri";
+import { useField } from "@formiz/core";
 
-import { FormGroup, FormGroupProps } from "./FormGroup";
+import { FormGroup } from "./FormGroup";
 
 export const FieldInput = (props: any) => {
   const {
@@ -48,6 +44,7 @@ export const FieldInput = (props: any) => {
   } = otherProps;
   const { required } = props;
   const [isTouched, setIsTouched] = useState(false);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [showPassword, setShowPassword] = useState(false);
   const showError = !isValid && ((isTouched && !isPristine) || isSubmitted);
 

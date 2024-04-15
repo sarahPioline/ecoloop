@@ -1,5 +1,4 @@
 import {
-  Button,
   Box,
   Heading,
   Stack,
@@ -8,7 +7,6 @@ import {
   Badge,
   IconButton,
 } from "@chakra-ui/react";
-import { useParams } from "react-router-dom";
 import { ArrowBackIcon } from "@chakra-ui/icons";
 import { useNavigate } from "react-router-dom";
 

@@ -1,5 +1,4 @@
-import { Button, HStack, Stack, Text, Link } from "@chakra-ui/react";
-import Menu from "../components/menu";
+import { Button,  Stack, Text, Link } from "@chakra-ui/react";
 import { ReactComponent as HomeEarth } from "../images/homeEarth.svg";
 import { ReactComponent as Arrow } from "../images/arrow.svg";
 import { ActualityHome } from "../components/ActualityHome";

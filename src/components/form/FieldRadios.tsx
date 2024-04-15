@@ -1,9 +1,9 @@
-import React, { ReactNode, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { Radio, RadioGroup, Wrap, WrapItem } from "@chakra-ui/react";
-import { FieldProps, useField } from "@formiz/core";
+import { useField } from "@formiz/core";
 
-import { FormGroup, FormGroupProps } from "./FormGroup";
+import { FormGroup } from "./FormGroup";
 
 export const FieldRadios = (props: any) => {
   const {
