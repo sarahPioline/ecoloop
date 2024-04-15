@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import {
-  AspectRatio,
   Box,
   Button,
   HStack,
@@ -9,13 +8,11 @@ import {
   Wrap,
   Text,
   WrapItem,
-  FormLabel,
 } from "@chakra-ui/react";
 import { FieldRadios } from "../../components/form/FieldRadios";
 import { HiInformationCircle } from "react-icons/hi";
 import { FieldInput } from "../../components/form/FieldInput";
 import { Formiz, FormizStep, useForm } from "@formiz/core";
-import { FaHamburger } from "react-icons/fa";
 import { LineStepper } from "../../components/form/LineStepper";
 
 export const FormFood = ({

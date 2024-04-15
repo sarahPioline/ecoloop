@@ -1,14 +1,8 @@
 import {
-  AspectRatio,
   Box,
-  Button,
   HStack,
-  Link,
   Stack,
-  Wrap,
   Text,
-  WrapItem,
-  FormLabel,
 } from "@chakra-ui/react";
 import { useForm } from "@formiz/core";
 import { BsCarFrontFill } from "react-icons/bs";

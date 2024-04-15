@@ -1,11 +1,9 @@
 import {
-  AspectRatio,
   Box,
   Button,
   HStack,
   Heading,
   Stack,
-  Grid,
   Text,
 } from "@chakra-ui/react";
 import { FaHamburger } from "react-icons/fa";

@@ -1,20 +1,15 @@
 import {
-  AspectRatio,
-  Box,
   Button,
   HStack,
   Heading,
   Stack,
-  Wrap,
   Text,
-  WrapItem,
-  FormLabel,
+
 } from "@chakra-ui/react";
 import { FieldRadios } from "../../components/form/FieldRadios";
 import { HiInformationCircle } from "react-icons/hi";
 import { FieldInput } from "../../components/form/FieldInput";
 import { Formiz, FormizStep, useForm } from "@formiz/core";
-import { BsCarFrontFill } from "react-icons/bs";
 import { LineStepper } from "../../components/form/LineStepper";
 
 export const FormDriver = ({
