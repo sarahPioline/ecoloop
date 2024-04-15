@@ -36,7 +36,7 @@ export const ActualityHome = () => {
         </Text>
         <Flex justifyContent="space-between">
           {topThreeData.map((article, index) => (
-            <Card maxW="sm" key={index} boxShadow="xl">
+            <Card maxW="sm" key={index} boxShadow="xl" bg={"white"} color={"black"}>
               <CardBody>
                 <Link
                   textDecoration="none"

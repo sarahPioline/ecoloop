@@ -28,7 +28,7 @@ export const Result = ({ valueTransport, valueFood }) => {
         alignItems={"center"}
         mb="20px"
       >
-        <Box w="150px" bgColor={"#FD8D25"} borderRadius={"14"} h="100%">
+        <Box w="150px" bgColor={"#FD8D25"} borderRadius={"14"} h="100%" p="5px">
           <Stack alignItems={"center"} h="100%" justifyContent={"center"}>
             <FaHamburger color="white" size="50%" margin={"auto"} />
 
@@ -44,7 +44,7 @@ export const Result = ({ valueTransport, valueFood }) => {
           </Stack>
         </Box>
         <Stack ml="23px" w="100%">
-          <Text fontWeight={"bold"} fontSize={"5xl"}>
+          <Text fontWeight={"bold"} fontSize={"2xl"}>
             2,8 tonnes
           </Text>
         </Stack>
@@ -59,7 +59,7 @@ export const Result = ({ valueTransport, valueFood }) => {
         alignItems={"center"}
         mb="20px"
       >
-        <Box w="150px" bgColor={"#6B70D6"} borderRadius={"14"} h="100%">
+        <Box w="150px" bgColor={"#6B70D6"} borderRadius={"14"} h="100%" p="5px">
           <Stack alignItems={"center"} h="100%" justifyContent={"center"}>
             <BsCarFrontFill color="white" size="50%" margin={"auto"} />
 
@@ -75,7 +75,7 @@ export const Result = ({ valueTransport, valueFood }) => {
           </Stack>
         </Box>
         <Stack ml="23px" w="100%">
-          <Text fontWeight={"bold"} fontSize={"5xl"}>
+          <Text fontWeight={"bold"} fontSize={"2xl"}>
             1,8 tonnes
           </Text>
         </Stack>

@@ -1,9 +1,9 @@
-import { Box, Flex, Link, useColorModeValue, Stack } from "@chakra-ui/react";
+import { Box, Flex, Link, Stack } from "@chakra-ui/react";
 import { ReactComponent as Logo } from "../logo.svg";
 
 export default function Menu() {
-  const linkColor = useColorModeValue("gray.600", "gray.200");
-  const linkHoverColor = useColorModeValue("gray.800", "white");
+  const linkColor = "gray.600";
+  const linkHoverColor = "gray.800";
 
   return (
     <Box ml="70px" mr="70px" mt="30px" mb="20px">

@@ -31,6 +31,7 @@ const router = createBrowserRouter([
 ]);
 
 const theme = extendTheme({
+
   colors: {
     brand: {
       100: "#00CC81",
@@ -38,11 +39,20 @@ const theme = extendTheme({
       300: "#AAECD4",
     },
   },
+  styles: {
+    global: {
+      body: {
+        color: "black", 
+        bg: "white"
+        // Remplacez par la couleur de texte par défaut souhaitée
+      },
+    },
+  },
 });
 
 root.render(
   <React.StrictMode>
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <Menu />
       <RouterProvider router={router} />
       <Footer />

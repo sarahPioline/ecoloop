@@ -5,7 +5,6 @@ import {
   Link,
   Image,
   Heading,
-  useColorModeValue,
   Badge,
   Button,
 } from "@chakra-ui/react";
@@ -14,6 +13,8 @@ import { Article } from "../components/article";
 import articles from "../articles/articles.json";
 
 export const Blog = () => {
+  console.log(process.env.PUBLIC_URL);
+
   const { id } = useParams();
   if (id) {
     const currentArticle = articles.find((objet) => objet.id === parseInt(id));
