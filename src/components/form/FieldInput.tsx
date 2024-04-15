@@ -73,6 +73,8 @@ export const FieldInput = (props: any) => {
           <NumberInput
             min={0}
             focusBorderColor="#15D08B"
+           _hover={{borderColor: 'gray.400'}}
+            borderColor={"gray.200"}
             value={value ?? ""}
             onChange={handleChange}
           >
@@ -87,8 +89,11 @@ export const FieldInput = (props: any) => {
         ) : (
           <Input
             focusBorderColor="#15D08B"
+            border={"1px"}
+            borderColor={"gray.200"}
             type={showPassword ? "text" : type || "text"}
             id={id}
+            _hover={{borderColor: 'gray.400'}}
             value={value ?? ""}
             onChange={(e) => setValue(e.target.value)}
             onFocus={() => setIsTouched(false)}
